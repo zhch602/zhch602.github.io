@@ -3,8 +3,8 @@
   <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gridea | Gridea</title>
-<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1557106174336">
+<title>性能优化 | Gridea</title>
+<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1557125675618">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://zhch602.github.io/styles/main.css">
 
@@ -27,7 +27,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://zhch602.github.io">
-  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1557106174336" alt="">
+  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1557125675618" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -83,32 +83,36 @@
 
         <div class="current-tag-container">
             <h2 class="title">
-                标签：#Gridea
+                标签：#性能优化
             </h2> 
         </div>
         <div class="post-container">
   
     <article class="post">
-      <a href="https://zhch602.github.io/post/hello-gridea">
-        <h2 class="post-title">Hello Gridea</h2>
+      <a href="https://zhch602.github.io/post/mysql-cha-xun-xing-neng-you-hua">
+        <h2 class="post-title">MySql查询性能优化</h2>
       </a>
       <div class="post-info">
         <time class="post-time">
-          · 2018-12-12 ·
+          · 2018-04-01 ·
         </time>
         
-          <a href="https://zhch602.github.io/tag/gridea" class="post-tag">
-            # Gridea
+          <a href="https://zhch602.github.io/tag/9T7Xm-fd4" class="post-tag">
+            # mysql
+          </a>
+        
+          <a href="https://zhch602.github.io/tag/wntwb2NOX" class="post-tag">
+            # 性能优化
           </a>
         
       </div>
       
-        <a href="https://zhch602.github.io/post/hello-gridea" class="post-feature-image" style="background-image: url('https://zhch602.github.io/post-images/hello-gridea.png')">
-        </a>
-      
       <div class="post-abstract">
-        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <h2 id="避免向数据库请求不需要的数据">避免向数据库请求不需要的数据</h2>
+<p>在访问数据库时，应该只请求需要的行和列。请求多余的行和列会消耗MySql服务器的CPU和内存资源，并增加网络开销。<br>
+例如在处理分页时，应该使用LIMIT限制MySql只返回一页的数据，而不是向应用程序返回全部数据后，再由应用程序过滤不需要的行。<br>
+当一行数据被多次使用时可以考虑将数据行缓存起来，避免每次使用都要到MySql查询。<br>
+避免使用SELECT *这种方式进行查询，应该只返回需要的列。</p>
 
       </di>
     </article>
