@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MySql查询性能优化 | Gridea</title>
-<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1557125675618">
+<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1557127416063">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://zhch602.github.io/styles/main.css">
 
@@ -27,7 +27,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://zhch602.github.io">
-  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1557125675618" alt="">
+  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1557127416063" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -71,11 +71,27 @@
       
     
       
-    
+        <a href="https://twitter.com/zhch602" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
       
     
       
+        <a href="https://weibo.com/5207780273" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
     
+      
+        <a href="https://www.zhihu.com/people/zhch602" target="_blank">
+          <i class="fab fa-zhihu"></i>
+        </a>
+      
+    
+      
+        <a href="https://www.facebook.com/zhch602" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
       
     
   </div>
@@ -108,8 +124,7 @@
 例如在处理分页时，应该使用LIMIT限制MySql只返回一页的数据，而不是向应用程序返回全部数据后，再由应用程序过滤不需要的行。<br>
 当一行数据被多次使用时可以考虑将数据行缓存起来，避免每次使用都要到MySql查询。<br>
 避免使用SELECT *这种方式进行查询，应该只返回需要的列。</p>
-<h2 id="-more-查询数据的方式"><!-- more -->
-查询数据的方式</h2>
+<h2 id="查询数据的方式">查询数据的方式</h2>
 <p>查询数据的方式有全表扫描、索引扫描、范围扫描、唯一索引查询、常数引用等。这些查询方式，速度从慢到快，扫描的行数也是从多到少。可以通过EXPLAIN语句中的type列反应查询采用的是哪种方式。<br>
 通常可以通过添加合适的索引改善查询数据的方式，使其尽可能减少扫描的数据行，加快查询速度。<br>
 例如，当发现查询需要扫描大量的数据行但只返回少数的行，那么可以考虑使用覆盖索引，即把所有需要用到的列都放到索引中。这样存储引擎无须回表获取对应行就可以返回结果了。</p>
