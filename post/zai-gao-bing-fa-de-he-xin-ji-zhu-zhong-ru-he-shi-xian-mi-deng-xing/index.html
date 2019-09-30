@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>在高并发的核心技术中如何实现幂等性 | Gridea</title>
-<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1557130472411">
+<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1569813878320">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://zhch602.github.io/styles/main.css">
 
@@ -27,7 +27,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://zhch602.github.io">
-  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1557130472411" alt="">
+  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1569813878320" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -151,7 +151,7 @@
 <p>select * from table_xxx where id='xxx' for update;</p>
 <p>注意：id字段一定是主键或者唯一索引，不然是锁表，会出事的。</p>
 <p>悲观锁使用时一般伴随事务一起使用，数据锁定时间可能会很长，根据实际情况选用</p>
-<p><img src="null" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="null" alt=""></figure>
 <p>6. 乐观锁</p>
 <p>乐观锁只是在更新数据那一刻锁表，其他时间不锁表，所以相对于悲观锁，效率更高。</p>
 <p>乐观锁的实现方式多种多样可以通过version或者其他状态条件：</p>
