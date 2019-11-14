@@ -1,121 +1,137 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>UUID | InJune&#39;s Blog</title>
-<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1573733811018">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    UUID | InJune&#39;s Blog
+</title>
+<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1573734263746">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zhch602.github.io/styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://zhch602.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139615634-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139615634-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-139615634-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  </head>
-  <body>
+        gtag('config', 'UA-139615634-1');
+    </script>
+    
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
+</head>
+
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://zhch602.github.io">
-  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1573733811018" alt="">
-  </a>
-  <h1 class="site-title">
-    InJune&#39;s Blog
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/zhch602" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-        <a href="https://twitter.com/zhch602" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
-    
-      
-        <a href="https://weibo.com/5207780273" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/zhch602" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.facebook.com/zhch602" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://zhch602.github.io">
+                <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1573734263746" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    InJune&#39;s Blog
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-      
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              UUID
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2018-05-06 ·
-              </time>
-              
-                <a href="https://zhch602.github.io/tag/imQ_OK1Mz" class="post-tags">
-                  # java
-                </a>
-              
-            </div>
-            
-            <div class="post-content">
-              <p>首先，即便是虚拟机的话MAC地址也是不一样的。另外你说的统一时间还是个宏观的概念，这个仅仅是决定了UUID生产串中的某一部分相同而已，因为为了保证UUID的唯一性，规范定义了包括网卡MAC地址、时间戳、名字空间（Namespace）、随机或伪随机数、时序等元素。<br>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            UUID
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2018-05-06</time>
+                            
+                                <a href="https://zhch602.github.io/tag/imQ_OK1Mz" class="post-tag i-tag
+                            i-tag-warning">
+                            #java
+                        </a>
+                                
+                        </div>
+                        
+                                <div class="post-content">
+                                    <p>首先，即便是虚拟机的话MAC地址也是不一样的。另外你说的统一时间还是个宏观的概念，这个仅仅是决定了UUID生产串中的某一部分相同而已，因为为了保证UUID的唯一性，规范定义了包括网卡MAC地址、时间戳、名字空间（Namespace）、随机或伪随机数、时序等元素。<br>
 当然，你要说UUID是不是绝对的不会出现重复的，这个也不能这样说的（我下面会提到）。</p>
 <p><strong>UUID具有以下涵义：</strong></p>
 <p><strong>经由一定的算法机器生成</strong><br>
@@ -146,58 +162,112 @@ Version 3/5适合于一定范围内名字唯一，且需要或可能会重复生
 人工维护的非系统生成对象。比如系统中的部分基础数据。<br>
 对于具有名称不可重复的自然特性的对象，最好使用Version 3/5的UUID。比如系统中的用户。如果用户的UUID是Version 1的，如果你不小心删除了再重建用户，你会发现人还是那个人，用户已经不是那个用户了。（虽然标记为删除状态也是一种解决方案，但会带来实现上的复杂性。）</p>
 
-            </div>
-          </article>
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://zhch602.github.io/post/mysql-cha-xun-xing-neng-you-hua">
+                                <h3 class="post-title">
+                                    MySql查询性能优化
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                                <!-- id-card -->
+                                
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://zhch602.github.io/images/avatar.png?v=1573734263746)">
         </div>
+        <h1 class="id_card-title">
+            InJune&#39;s Blog
+        </h1>
+        <h2 class="id_card-description">
+            温故而知新
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                <a href="https://github.com/zhch602" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-github"></i></a>
+                
+                    <!-- twitter -->
+                    
+                        <a href="https://twitter.com/zhch602" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-twitter"></i></a>
+                        
+                            <!-- weibo -->
+                            
+                                <a href="https://weibo.com/5207780273" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-weibo"></i></a>
+                                
+                                    <!-- facebook -->
+                                    
+                                        <a href="https://www.facebook.com/zhch602" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-facebook"></i></a>
+                                        
+
+        </div>
+    </div>
     
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://zhch602.github.io/post/mysql-cha-xun-xing-neng-you-hua">
-              <h3 class="post-title">
-                MySql查询性能优化
-              </h3>
-            </a>
-          </div>  
-        
+                                    
 
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                </div>
 
-<div id="gitalk-container"></div>
 
-<script>
 
-  var gitalk = new Gitalk({
-    clientID: '280a3bb97a84fecf966a',
-    clientSecret: 'ea1decfc1ac538edc3ccb144abc33a4cc9a8fa7a',
-    repo: 'zhch602.github.io',
-    owner: 'zhch602',
-    admin: ['zhch602'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
 
-  gitalk.render('gitalk-container')
+            </div>
 
-</script>
 
-          
-
-          
-        
-    
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://zhch602.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
+
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '280a3bb97a84fecf966a',
+            clientSecret: 'ea1decfc1ac538edc3ccb144abc33a4cc9a8fa7a',
+            repo: 'zhch602.github.io',
+            owner: 'zhch602',
+            admin: ['zhch602'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
 </html>

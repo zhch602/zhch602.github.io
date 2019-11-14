@@ -1,125 +1,142 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MySql查询性能优化 | InJune&#39;s Blog</title>
-<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1573733811018">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    MySql查询性能优化 | InJune&#39;s Blog
+</title>
+<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1573734263746">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zhch602.github.io/styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://zhch602.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139615634-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139615634-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-139615634-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  </head>
-  <body>
+        gtag('config', 'UA-139615634-1');
+    </script>
+    
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
+</head>
+
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://zhch602.github.io">
-  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1573733811018" alt="">
-  </a>
-  <h1 class="site-title">
-    InJune&#39;s Blog
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/zhch602" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-        <a href="https://twitter.com/zhch602" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
-    
-      
-        <a href="https://weibo.com/5207780273" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/zhch602" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.facebook.com/zhch602" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://zhch602.github.io">
+                <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1573734263746" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    InJune&#39;s Blog
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-      
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              MySql查询性能优化
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2018-04-01 ·
-              </time>
-              
-                <a href="https://zhch602.github.io/tag/9T7Xm-fd4" class="post-tags">
-                  # mysql
-                </a>
-              
-                <a href="https://zhch602.github.io/tag/wntwb2NOX" class="post-tags">
-                  # 性能优化
-                </a>
-              
-            </div>
-            
-            <div class="post-content">
-              <h2 id="避免向数据库请求不需要的数据">避免向数据库请求不需要的数据</h2>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            MySql查询性能优化
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2018-04-01</time>
+                            
+                                <a href="https://zhch602.github.io/tag/9T7Xm-fd4" class="post-tag i-tag
+                            i-tag-primary">
+                            #mysql
+                        </a>
+                                
+                                <a href="https://zhch602.github.io/tag/wntwb2NOX" class="post-tag i-tag
+                            i-tag-banana">
+                            #性能优化
+                        </a>
+                                
+                        </div>
+                        
+                                <div class="post-content">
+                                    <h2 id="避免向数据库请求不需要的数据">避免向数据库请求不需要的数据</h2>
 <p>在访问数据库时，应该只请求需要的行和列。请求多余的行和列会消耗MySql服务器的CPU和内存资源，并增加网络开销。<br>
 例如在处理分页时，应该使用LIMIT限制MySql只返回一页的数据，而不是向应用程序返回全部数据后，再由应用程序过滤不需要的行。<br>
 当一行数据被多次使用时可以考虑将数据行缓存起来，避免每次使用都要到MySql查询。<br>
@@ -225,49 +242,116 @@ ORDER BY rental_id DESC LIMIT 20;
 <h2 id="优化union查询">优化UNION查询</h2>
 <p>除非确实需要服务器消除重复的行，否则一定要使用UNION ALL。如果没有ALL关键字，MySql会给临时表加上DISTINCT选项，这会导致对整个临时表的数据做唯一性检查。这样做的代价非常高。</p>
 
-            </div>
-          </article>
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E9%81%BF%E5%85%8D%E5%90%91%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%B7%E6%B1%82%E4%B8%8D%E9%9C%80%E8%A6%81%E7%9A%84%E6%95%B0%E6%8D%AE">避免向数据库请求不需要的数据</a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E5%BC%8F">查询数据的方式</a></li>
+<li><a href="#%E5%88%86%E8%A7%A3%E5%A4%A7%E7%9A%84%E6%9F%A5%E8%AF%A2">分解大的查询</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96min%E5%92%8Cmax">优化MIN()和MAX()</a></li>
+<li><a href="#%E7%94%A8in%E5%8F%96%E4%BB%A3or">用IN()取代OR</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2">优化关联查询</a></li>
+<li><a href="#%E4%B8%B4%E6%97%B6%E8%A1%A8%E7%9A%84%E6%A6%82%E5%BF%B5">临时表的概念</a></li>
+<li><a href="#%E6%8E%92%E5%BA%8F%E4%BC%98%E5%8C%96">排序优化</a></li>
+<li><a href="#%E5%AD%90%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96">子查询优化</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96count%E6%9F%A5%E8%AF%A2">优化COUNT()查询</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96limit%E5%88%86%E9%A1%B5">优化LIMIT分页</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96union%E6%9F%A5%E8%AF%A2">优化UNION查询</a></li>
+</ul>
+</li>
+</ul>
+
         </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
     
-        
+                            
 
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                </div>
 
-<div id="gitalk-container"></div>
 
-<script>
 
-  var gitalk = new Gitalk({
-    clientID: '280a3bb97a84fecf966a',
-    clientSecret: 'ea1decfc1ac538edc3ccb144abc33a4cc9a8fa7a',
-    repo: 'zhch602.github.io',
-    owner: 'zhch602',
-    admin: ['zhch602'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
 
-  gitalk.render('gitalk-container')
+            </div>
 
-</script>
 
-          
-
-          
-        
-    
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://zhch602.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
+
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '280a3bb97a84fecf966a',
+            clientSecret: 'ea1decfc1ac538edc3ccb144abc33a4cc9a8fa7a',
+            repo: 'zhch602.github.io',
+            owner: 'zhch602',
+            admin: ['zhch602'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
 </html>

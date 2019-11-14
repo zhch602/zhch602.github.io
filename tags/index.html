@@ -1,122 +1,141 @@
 <html>
-  <head>
-  <meta charset="utf-8" />
+
+<head>
+    <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>InJune&#39;s Blog</title>
-<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1573733811018">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    InJune&#39;s Blog
+</title>
+<link rel="shortcut icon" href="https://zhch602.github.io/favicon.ico?v=1573734263746">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zhch602.github.io/styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://zhch602.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139615634-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139615634-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-139615634-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  </head>
-  <body>
+        gtag('config', 'UA-139615634-1');
+    </script>
+    
+</head>
+
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://zhch602.github.io">
-  <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1573733811018" alt="">
-  </a>
-  <h1 class="site-title">
-    InJune&#39;s Blog
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/zhch602" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-        <a href="https://twitter.com/zhch602" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
-    
-      
-        <a href="https://weibo.com/5207780273" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/zhch602" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.facebook.com/zhch602" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://zhch602.github.io">
+                <img class="avatar" src="https://zhch602.github.io/images/avatar.png?v=1573734263746" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    InJune&#39;s Blog
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
 
-        <div class="tags-container">
-          
-            <a class="tag" href="https://zhch602.github.io/tag/imQ_OK1Mz">java</a>
-          
-            <a class="tag" href="https://zhch602.github.io/tag/9T7Xm-fd4">mysql</a>
-          
-            <a class="tag" href="https://zhch602.github.io/tag/wntwb2NOX">性能优化</a>
-          
-        </div>
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+        });
+    });
+</script>
+
+            <div class="tags-container main-container">
+                <div class="tags-group">
+                    
+                        <a class="tags-tag i-tag
+                            i-tag-other_3" href="https://zhch602.github.io/tag/imQ_OK1Mz">
+                            java
+                        </a>
+                        
+                        <a class="tags-tag i-tag
+                            i-tag-success" href="https://zhch602.github.io/tag/9T7Xm-fd4">
+                            mysql
+                        </a>
+                        
+                        <a class="tags-tag i-tag
+                            i-tag-other_4" href="https://zhch602.github.io/tag/wntwb2NOX">
+                            性能优化
+                        </a>
+                        
+                </div>
+            </div>
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://zhch602.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
