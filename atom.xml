@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhch602.github.io</id>
     <title>InJune&apos;s Blog</title>
-    <updated>2019-11-14T12:54:23.878Z</updated>
+    <updated>2019-11-15T06:35:08.430Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhch602.github.io"/>
     <link rel="self" href="https://zhch602.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>天道酬勤</subtitle>
     <logo>https://zhch602.github.io/images/avatar.png</logo>
     <icon>https://zhch602.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, InJune&apos;s Blog</rights>
